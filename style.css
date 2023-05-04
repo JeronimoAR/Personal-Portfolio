@@ -173,7 +173,6 @@ body {
   margin-left: 10px;
   height: 200px;
   background-color: #fff;
-  background-image: url("assets/Steve.gif");
   flex: 1;
   transition: .3s all ease;
 }

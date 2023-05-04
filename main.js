@@ -82,19 +82,19 @@ w.addEventListener("scroll", s => {
     skillsButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 500 && w.scrollY < 1100) {
+  } else if (w.scrollY >= 500 && w.scrollY < 1200) {
     aboutButton.classList.add("active");
     homeButton.classList.remove("active");
     skillsButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 1100 && w.scrollY < 1600) {
+  } else if (w.scrollY >= 1200 && w.scrollY < 1700) {
     skillsButton.classList.add("active");
     aboutButton.classList.remove("active");
     homeButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 1600 && w.scrollY < 2000) {
+  } else if (w.scrollY >= 1700 && w.scrollY < 2200) {
     portfolioButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
