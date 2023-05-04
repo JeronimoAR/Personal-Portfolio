@@ -169,15 +169,18 @@ body {
   height: 250px;
 }
 .card{
+  overflow: hidden;
   border-radius: 20px;
   margin-left: 10px;
+  margin-bottom: 10px;
   height: 200px;
   background-color: #fff;
   flex: 1;
   transition: .3s all ease;
 }
+
 .card h1{
-  padding: 70px;;
+  padding: 70px;
   border-radius: 20px;
   height: 200px;
   background-color: #1f242d;
@@ -190,10 +193,10 @@ body {
 }
 
 .contact{
-  margin: 200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   display: flex;
   text-align: center;
-
 }
 .contact div{
   margin: 0 auto;

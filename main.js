@@ -26,28 +26,39 @@ scene.add(pointLight, ambientLight);
 
 //const controls = new OrbitControls(camera, renderer.domElement);
 
+//Stars
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
-  
+
   const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(300));
-  
+
   star.position.set(x, y, z);
   scene.add(star);
 }
-
 Array(600).fill().forEach(addStar);
 
+//Responsive
+window.addEventListener("resize", function (e) {
+  console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
+  renderer.setSize(document.body.clientWidth, document.body.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  camera.aspect = document.body.clientWidth / document.body.clientHeight;
+  camera.updateProjectionMatrix();
+})
+
+//Camera movement
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  
+
   camera.position.z = t * -0.03;
   camera.position.y = t * -0.002;
 }
 
 document.body.onscroll = moveCamera
 
+//animation
 function animate() {
   requestAnimationFrame(animate);
   //controls.update();
@@ -71,11 +82,11 @@ const portfolioButton = document.getElementById("btn-portfolio");
 const contactButton = document.getElementById("btn-contact");
 
 const w = window;
-w.addEventListener("load" , l => {
+w.addEventListener("load", l => {
   homeButton.classList.add("active");
 });
 w.addEventListener("scroll", s => {
-  console.log(w.scrollY);
+  //console.log(w.scrollY);
   if (w.scrollY < 500) {
     homeButton.classList.add("active");
     aboutButton.classList.remove("active");
