@@ -86,7 +86,6 @@ body {
 
 .home-content {
   max-width: 600px;
-  ;
 }
 
 .home-content h3 {
@@ -119,8 +118,8 @@ body {
 }
 
 .home-img img {
-  max-width: 450px;
-  margin-right: -20px;
+  max-width: 100%;
+  margin-right: -500px;
   animation: slideBottom 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: .1s, 1s;
 }
