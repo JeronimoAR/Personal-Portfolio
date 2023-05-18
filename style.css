@@ -2,7 +2,9 @@
 ::-webkit-scrollbar {
   display: none;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 canvas {
   position: fixed;
   top: 0;
@@ -46,7 +48,7 @@ body {
   animation: slideRight 1s ease forwards;
 }
 
-.navbar button {
+.navbar a {
   font-size: 18px;
   color: #fff;
   text-decoration: none;
@@ -60,12 +62,12 @@ body {
   animation-delay: calc(.2s * var(--i));
 }
 
-.navbar button:hover,
-.navbar button.active {
+.navbar a:hover,
+.navbar a.active {
   color: #3DE70F;
 }
 
-.home {
+#home {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -75,7 +77,16 @@ body {
   padding: 70px 10% 0;
 }
 
-.about{
+#about{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+  width: 45%;
+  z-index: 81;
+}
+
+#skills{
   position: relative;
   margin: 0 auto;
   margin-top: 14rem;
@@ -159,11 +170,17 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
+  transition: .5s ease;
   animation: slideBottom 1s ease forwards;
   animation-delay: .1s;
 }
 
-.container{
+.btn:hover{
+  background: transparent;
+  color: #3DE70F;
+}
+
+#container{
   display: flex;
   height: 250px;
 }
@@ -191,16 +208,16 @@ body {
   background-color: rgb(207, 207 207);
 }
 
-.contact{
+#contact{
   margin-top: 200px;
   margin-bottom: 200px;
   display: flex;
   text-align: center;
 }
-.contact div{
+#contact div{
   margin: 0 auto;
 }
-.contact div a{
+#contact div a{
   width: 120px;
   height: 120px;
   font-size: 50px;

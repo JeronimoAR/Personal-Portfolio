@@ -16,16 +16,16 @@
     <a onclick="window.scrollTo({behavior: 'smooth',top: '0'});" class="logo">Portfolio.</a>
 
     <nav class="navbar">
-      <button onclick="window.scrollTo({behavior: 'smooth',top: '0'});" id="btn-home" style="--i:1">Home</button>
-      <button onclick="window.scrollTo({behavior: 'smooth',top: '700'});" id="btn-about" style="--i:2">About</button>
-      <button onclick="window.scrollTo({behavior: 'smooth',top: '1300'});" id="btn-skills" style="--i:3">Skills</button>
-      <button onclick="window.scrollTo({behavior: 'smooth',top: '1800'});" id="btn-portfolio"
-        style="--i:4">Projects</button>
-      <button onclick="window.scrollTo({behavior: 'smooth',top: '2300'});" id="btn-contact"
-        style="--i:5">Contact</button>
+      <a href="#home" id="btn-home" style="--i:1">Home</a>
+      <a href="#about" id="btn-about" style="--i:2">About</a>
+      <a href="#skills" id="btn-skills" style="--i:3">Skills</a>
+      <a href="#container" id="btn-portfolio"
+        style="--i:4">Projects</a>
+      <a href="#contact" id="btn-contact"
+        style="--i:5">Contact</a>
     </nav>
   </header>
-  <secttion class="home">
+  <secttion id="home">
     <div class="home-content">
       <h3>Hello World!</h3>
       <h3>I'm <span class="multiple-text"></span></h3>
@@ -44,6 +44,7 @@
       <img src="assets/Profile_Picture.png" alt="">
     </div>
   </secttion>
+  <div id="about" style="margin: 50px;"></div>
   <div id="about" class="about">
     <h2>About Me</h2>
     <p>
@@ -64,7 +65,8 @@
       <li> Responsabilidad y paciencia</li>
     </ul>
   </div>
-  <div id="about" class="about">
+  <div id="skills" class="skills" style="margin: 30px;">a</div>
+  <div id="skills" class="skills">
     <h2>Skills</h2>
     <p>
       Programacion full stack utilizando herramientas como:
@@ -81,7 +83,8 @@
       <li> C++</li>
     </ul>
   </div>
-  <div class="container">
+  <div id="container" style="margin: 2px;"></div>
+  <div id="container">
     <div class="card" style="background-image: url('assets/codeBGeComerce.PNG');">
       <h1>Coming soon</h1>
     </div>
@@ -95,7 +98,8 @@
   <div style="position: relative; display: flex; justify-content: center;">
     <a href="https://github.com/JeronimoAR" class="btn">Git Hub</a>
   </div>
-  <div class="contact">
+  <div id="contact" style="margin: 50px;"></div>
+  <div id="contact">
     <div class="social-media">
       <h1>Contact Me</h1>
       <a href="https://www.linkedin.com/in/jer%C3%B3nimo-arias-9b7691230"><i class='bx bxl-linkedin-square'></i></a>
@@ -106,5 +110,6 @@
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
-
 </html>
+
+<!--Hover Botones, navbar links-->
