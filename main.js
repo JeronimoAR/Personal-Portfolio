@@ -1,13 +1,18 @@
-import './style.css'
+import "./style.css";
 
-import * as THREE from 'three';
+import * as THREE from "three";
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 //Background Animation
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
 const renderer = new THREE.WebGL1Renderer({
-  canvas: document.querySelector('#bg'),
+  canvas: document.querySelector("#bg"),
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -32,7 +37,9 @@ function addStar() {
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
-  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(300));
+  const [x, y, z] = Array(3)
+    .fill()
+    .map(() => THREE.MathUtils.randFloatSpread(300));
 
   star.position.set(x, y, z);
   scene.add(star);
@@ -46,7 +53,7 @@ window.addEventListener("resize", function (e) {
   renderer.setPixelRatio(window.devicePixelRatio);
   camera.aspect = document.body.clientWidth / document.body.clientHeight;
   camera.updateProjectionMatrix();
-})
+});
 
 //Camera movement
 function moveCamera() {
@@ -56,7 +63,7 @@ function moveCamera() {
   camera.position.y = t * -0.002;
 }
 
-document.body.onscroll = moveCamera
+document.body.onscroll = moveCamera;
 
 //animation
 function animate() {
@@ -64,7 +71,7 @@ function animate() {
   //controls.update();
   renderer.render(scene, camera);
 }
-animate()
+animate();
 
 //Typed
 var typed = new Typed(".multiple-text", {
@@ -72,8 +79,8 @@ var typed = new Typed(".multiple-text", {
   typeSpeed: 70,
   backSpeed: 70,
   backDelay: 1000,
-  loop: true
-})
+  loop: true,
+});
 //Active Buttons
 const homeButton = document.getElementById("btn-home");
 const aboutButton = document.getElementById("btn-about");
@@ -82,36 +89,50 @@ const portfolioButton = document.getElementById("btn-portfolio");
 const contactButton = document.getElementById("btn-contact");
 
 const w = window;
-w.addEventListener("load", l => {
+w.addEventListener("load", (l) => {
   homeButton.classList.add("active");
 });
-w.addEventListener("scroll", s => {
-  //console.log(w.scrollY);
-  if (w.scrollY < 500) {
+w.addEventListener("scroll", (s) => {
+  console.log("Pantalla: " + w.scrollY);
+  let homeButtonCords = document.getElementById("home").getBoundingClientRect();
+  let aboutButtonCords = document
+    .getElementById("about")
+    .getBoundingClientRect();
+  let skillsButtonCords = document
+    .getElementById("skills")
+    .getBoundingClientRect();
+  let portfolioButtonCords = document
+    .getElementById("projects")
+    .getBoundingClientRect();
+  let contactButtonCords = document
+    .getElementById("contact")
+    .getBoundingClientRect();
+  console.log("Cords obejeto: " + aboutButtonCords.bottom);
+  if (homeButtonCords.top === 0) {
     homeButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 500 && w.scrollY < 1200) {
+  } else if (aboutButtonCords.top === 0) {
     aboutButton.classList.add("active");
     homeButton.classList.remove("active");
     skillsButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 1200 && w.scrollY < 1700) {
+  } else if (skillsButtonCords.top === 0) {
     skillsButton.classList.add("active");
     aboutButton.classList.remove("active");
     homeButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 1700 && w.scrollY < 2200) {
+  } else if (portfolioButtonCords.top === 0) {
     portfolioButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
     homeButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (w.scrollY >= 2000) {
+  } else if (contactButtonCords.top > 0) {
     contactButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
