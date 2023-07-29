@@ -1,3 +1,4 @@
+/*General Config*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
 ::-webkit-scrollbar {
   display: none;
@@ -23,6 +24,30 @@ body {
   background: #1f242d;
   color: #fff;
 }
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #3DE70F;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #3DE70F;
+  font-size: 16px;
+  color: #1f242d;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .5s ease;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .1s;
+}
+
+.btn:hover{
+  background: transparent;
+  color: #3DE70F;
+}
+
+/*header*/
 
 .header {
   position: fixed;
@@ -67,6 +92,8 @@ body {
   color: #3DE70F;
 }
 
+/*Home*/
+
 #home {
   position: relative;
   width: 100%;
@@ -75,24 +102,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 70px 10% 0;
-}
-
-#about{
-  position: relative;
-  margin: 0 auto;
-  margin-top: 14rem;
-  margin-bottom: 14rem;
-  width: 45%;
-  z-index: 81;
-}
-
-#skills{
-  position: relative;
-  margin: 0 auto;
-  margin-top: 14rem;
-  margin-bottom: 14rem;
-  width: 45%;
-  z-index: 81;
 }
 
 .home-content {
@@ -135,6 +144,36 @@ body {
   animation-delay: .1s, 1s;
 }
 
+/*About*/
+#about{
+  position: relative;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+  padding-top: 100px;
+  width: 45%;
+  z-index: 81;
+}
+
+/*Skils*/
+#skills{
+  position: relative;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+  width: 45%;
+  padding-top: 150px;
+  z-index: 81;
+}
+
+
+
 .social-media a {
   display: inline-flex;
   justify-content: center;
@@ -159,30 +198,11 @@ body {
   box-shadow: 0 0 20px #3DE70F;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #3DE70F;
-  border-radius: 40px;
-  box-shadow: 0 0 10px #3DE70F;
-  font-size: 16px;
-  color: #1f242d;
-  letter-spacing: 1px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: .5s ease;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: .1s;
-}
-
-.btn:hover{
-  background: transparent;
-  color: #3DE70F;
-}
-
-#container{
+/*Projects*/
+.container{
   display: flex;
-  height: 250px;
+  justify-content: end;
+  padding-top: 200px;
 }
 .card{
   overflow: hidden;
@@ -208,6 +228,14 @@ body {
   background-color: rgb(207, 207 207);
 }
 
+.github-btn{
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/*Contact*/
 #contact{
   margin-top: 200px;
   margin-bottom: 200px;

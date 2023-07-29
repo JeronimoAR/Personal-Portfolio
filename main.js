@@ -41,7 +41,7 @@ Array(600).fill().forEach(addStar);
 
 //Responsive
 window.addEventListener("resize", function (e) {
-  //console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
+  console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
   renderer.setSize(document.body.clientWidth, document.body.clientHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   camera.aspect = document.body.clientWidth / document.body.clientHeight;
