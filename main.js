@@ -93,7 +93,7 @@ w.addEventListener("load", (l) => {
   homeButton.classList.add("active");
 });
 w.addEventListener("scroll", (s) => {
-  console.log("Pantalla: " + w.scrollY);
+  //console.log("Pantalla: " + w.scrollY);
   let homeButtonCords = document.getElementById("home").getBoundingClientRect();
   let aboutButtonCords = document
     .getElementById("about")
@@ -107,32 +107,32 @@ w.addEventListener("scroll", (s) => {
   let contactButtonCords = document
     .getElementById("contact")
     .getBoundingClientRect();
-  console.log("Cords obejeto: " + aboutButtonCords.bottom);
-  if (homeButtonCords.top === 0) {
+  //console.log("Cords portfolio bottom: " + portfolioButtonCords.bottom);
+  if (homeButtonCords.top <= 0 && aboutButtonCords.top > 0) {
     homeButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (aboutButtonCords.top === 0) {
+  } else if (aboutButtonCords.top <= 0 && skillsButtonCords.top > 0) {
     aboutButton.classList.add("active");
     homeButton.classList.remove("active");
     skillsButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (skillsButtonCords.top === 0) {
+  } else if (skillsButtonCords.top <= 0 && portfolioButtonCords.top > 0) {
     skillsButton.classList.add("active");
     aboutButton.classList.remove("active");
     homeButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (portfolioButtonCords.top === 0) {
+  } else if (portfolioButtonCords.top <= 0 && portfolioButtonCords.bottom >= 0) {
     portfolioButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
     homeButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (contactButtonCords.top > 0) {
+  } else if (portfolioButtonCords.bottom < 0) {
     contactButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
