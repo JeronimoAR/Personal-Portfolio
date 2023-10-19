@@ -140,3 +140,8 @@ w.addEventListener("scroll", (s) => {
     homeButton.classList.remove("active");
   }
 });
+
+window.addEventListener('load', function () {
+  const loadingScreen = document.querySelector('.loading-screen');
+  loadingScreen.style.display = 'none';
+});
