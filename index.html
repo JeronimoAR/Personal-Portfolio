@@ -18,19 +18,20 @@
   <header class="header">
     <a onclick="window.scrollTo({behavior: 'smooth',top: '0'});" class="logo">Portfolio.</a>
     <nav class="navbar">
+      <button class="btn" id="language-toggle" data-translation="toggle">Toggle Language</button>
       <a href="#home" id="btn-home" style="--i:1">Home</a>
       <a href="#about" id="btn-about" style="--i:2">About</a>
       <a href="#skills" id="btn-skills" style="--i:3">Skills</a>
-      <a href="#projects" id="btn-portfolio"
-        style="--i:4">Projects</a>
-      <a href="#contact" id="btn-contact"
-        style="--i:5">Contact</a>
+      <a href="#projects" id="btn-portfolio" style="--i:4">Projects</a>
+      <a href="#contact" id="btn-contact" style="--i:5">Contact</a>
     </nav>
   </header>
   <secttion id="home">
     <div class="home-content">
-      <h3>Hello World!</h3>
-      <h3>I'm <span class="multiple-text"></span></h3>
+      <h3 data-translation="welcome">Hello World!</h3>
+      <h3>
+        <h3 data-translation="im">I'm</h3><span class="multiple-text"></span><span class="texto-multiple"></span>
+      </h3>
       <p>Scroll down to know more about me
         or use the top buttons for a better experience
       </p>
@@ -40,7 +41,8 @@
         <a href="mailto:jeronimoarias1212@gmail.com"><i class='bx bxl-gmail'></i></a>
         <a href="https://wa.me/573167561290"><i class='bx bxl-whatsapp'></i></a>
       </div>
-      <a href="https://drive.google.com/file/d/1pNuTqiFnXMdlYj8q5M2R1IPGQOBV6bFX/view?usp=drive_link" class="btn">Download CV.</a>
+      <a href="https://drive.google.com/file/d/1pNuTqiFnXMdlYj8q5M2R1IPGQOBV6bFX/view?usp=drive_link"
+        class="btn">Download CV.</a>
     </div>
     <div class="home-img">
       <img src="assets/Profile_Picture.png" alt="">
@@ -108,4 +110,5 @@
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
+
 </html>

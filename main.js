@@ -80,7 +80,18 @@ var typed = new Typed(".multiple-text", {
   backSpeed: 70,
   backDelay: 1000,
   loop: true,
+  showCursor: false,
 });
+//tipeo
+var tipeo = new Typed(".texto-multiple", {
+  strings: ["Jeronimo", "Desarrollador Full Stack", "Creador de contenido"],
+  typeSpeed: 70,
+  backSpeed: 70,
+  backDelay: 1000,
+  loop: true,
+  showCursor: false,
+});
+
 //Active Buttons
 const homeButton = document.getElementById("btn-home");
 const aboutButton = document.getElementById("btn-about");
@@ -126,7 +137,10 @@ w.addEventListener("scroll", (s) => {
     homeButton.classList.remove("active");
     portfolioButton.classList.remove("active");
     contactButton.classList.remove("active");
-  } else if (portfolioButtonCords.top <= 0 && portfolioButtonCords.bottom >= 0) {
+  } else if (
+    portfolioButtonCords.top <= 0 &&
+    portfolioButtonCords.bottom >= 0
+  ) {
     portfolioButton.classList.add("active");
     aboutButton.classList.remove("active");
     skillsButton.classList.remove("active");
@@ -141,7 +155,56 @@ w.addEventListener("scroll", (s) => {
   }
 });
 
-window.addEventListener('load', function () {
-  const loadingScreen = document.querySelector('.loading-screen');
-  loadingScreen.style.display = 'none';
+window.addEventListener("load", function () {
+  const loadingScreen = document.querySelector(".loading-screen");
+  loadingScreen.style.display = "none";
+});
+
+// Define translations for different languages
+const translations = {
+  en: {
+    welcome: "Hello world",
+    toggle: "Toggle Language",
+    im: "I'm",
+    multipleText: `${typed}`,
+  },
+  es: {
+    welcome: "Hola mundo",
+    toggle: "Cambiar Idioma",
+    im: "Soy",
+    multipleText: `${tipeo}`
+  },
+};
+
+// Function to update the content with the selected language
+function updateLanguage(language) {
+  const elements = document.querySelectorAll("[data-translation]");
+  elements.forEach((element) => {
+    const key = element.getAttribute("data-translation");
+    console.log(key);
+    console.log(language);
+    element.textContent = translations[language][key];
+  });
+}
+
+// Initial language setting
+let currentLanguage = "en"; // Default to English
+updateLanguage(currentLanguage);
+
+// Toggle language when the button is clicked
+const languageToggle = document.getElementById("language-toggle");
+const typeds = document.querySelector(".multiple-text");
+const tipeos = document.querySelector(".texto-multiple");
+tipeos.style.display = "none";
+
+languageToggle.addEventListener("click", () => {
+  currentLanguage = currentLanguage === "en" ? "es" : "en"; // Toggle between English and Spanish
+  updateLanguage(currentLanguage);
+  if (currentLanguage == "en") {
+    typeds.style.display = "block";
+    tipeos.style.display = "none";
+  } else {
+    tipeos.style.display = "block";
+    typeds.style.display = "none";
+  }
 });
