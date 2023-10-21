@@ -165,14 +165,58 @@ const translations = {
   en: {
     welcome: "Hello world",
     toggle: "Toggle Language",
+    homeBtn: "Home",
+    aboutBtn: "About",
+    skillsBtn: "Skills",
+    projectsBtn: "Projects",
+    contactBtn: "Contact",
     im: "I'm",
-    multipleText: `${typed}`,
+    scroll:
+      "Scroll down to know more about me or use the top buttons for a better experience",
+    downloadCV: "Download CV.",
+    aboutMe: "About Me",
+    aboutMeText:
+      "Full-stack programmer with practical knowledge of programming languages and the ability to quickly grasp new technologies, along with the skill to work in a team environment.",
+    aptitudes: "Aptitudes",
+    asist: "Assistance to the Development Manager or Senior Developer",
+    contribution: "Contribute to the company's development process",
+    Capacitacion: "Continuous training",
+    investigation: "Research",
+    monitorizacion: "Monitoring",
+    diseñar: "Design and definition",
+    solucionar: "troubleshooting",
+    responsability: "Responsibility and patience",
+    skills:"Skills",
+    skillsText:"FullStack develpment with: ",
+    contact:"Contact me",
   },
   es: {
     welcome: "Hola mundo",
     toggle: "Cambiar Idioma",
+    homeBtn: "Inicio",
+    aboutBtn: "Sobre Mi",
+    skillsBtn: "Skills",
+    projectsBtn: "Proyectos",
+    contactBtn: "Contacto",
     im: "Soy",
-    multipleText: `${tipeo}`
+    scroll:
+      "Dezlisa hacia abajo para saber mas o utiliza los botones de arriba para una mejor experiencia",
+    downloadCV: "Descargar CV.",
+    aboutMe: "Sobre mi",
+    aboutMeText:
+      "Programador FULL STACK, con conocimiento práctico en lenguajes de programación y capacidad de entender nuevas tecnologías rapidamente y la facultad de trabajar en un entorno de equipo. Aspirante a Game Developer",
+    aptitudes: "Aptitudes",
+    asist: "Asistencia al gerente de desarrollo o desarrollador senior",
+    contribution: "Contribuir en el proceso de desarrollo de la empresa",
+    Capacitacion: "Capacitación constante",
+    investigation: "Investigación",
+    monitorizacion: "Monitorización",
+    diseñar: "Diseñar y definir",
+    solucionar: "Solucionar errores",
+    responsability: "Responsabilidad y paciencia",
+    skills:"Abilidades",
+    skillsText:"Programacion full stack utilizando herramientas como:",
+    contact:"Contactame",
   },
 };
 
@@ -192,7 +236,7 @@ let currentLanguage = "en"; // Default to English
 updateLanguage(currentLanguage);
 
 // Toggle language when the button is clicked
-const languageToggle = document.getElementById("language-toggle");
+const languageToggle = document.getElementById("toggle");
 const typeds = document.querySelector(".multiple-text");
 const tipeos = document.querySelector(".texto-multiple");
 tipeos.style.display = "none";

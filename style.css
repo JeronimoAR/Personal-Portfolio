@@ -147,8 +147,24 @@ body {
 
 }
 
-.home-content h3 span {
+.home-content h2{
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.container-typed{
+  display: flex;
+  opacity: 0;
+  animation: slideBottom 2s ease forwards;
+  animation-delay: .7s;
+}
+
+.multiple-text, .texto-multiple {
   color: #3DE70F;
+  align-self: center;
+  margin-left: 10px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .home-content h1 {

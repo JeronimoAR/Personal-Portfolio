@@ -17,22 +17,25 @@
   </div>
   <header class="header">
     <a onclick="window.scrollTo({behavior: 'smooth',top: '0'});" class="logo">Portfolio.</a>
+    <input type="checkbox" id="toggle" data-translation="toggle">
+      <label for="toggle" class="toggle--label">
+        <span class="toggle--label-background"></span>
+      </label>
     <nav class="navbar">
-      <button class="btn" id="language-toggle" data-translation="toggle">Toggle Language</button>
-      <a href="#home" id="btn-home" style="--i:1">Home</a>
-      <a href="#about" id="btn-about" style="--i:2">About</a>
-      <a href="#skills" id="btn-skills" style="--i:3">Skills</a>
-      <a href="#projects" id="btn-portfolio" style="--i:4">Projects</a>
-      <a href="#contact" id="btn-contact" style="--i:5">Contact</a>
+      <a href="#home" id="btn-home" style="--i:1" data-translation="homeBtn">Home</a>
+      <a href="#about" id="btn-about" style="--i:2" data-translation="aboutBtn">About</a>
+      <a href="#skills" id="btn-skills" style="--i:3" data-translation="skillBtn">Skills</a>
+      <a href="#projects" id="btn-portfolio" style="--i:4" data-translation="projectsBtn">Projects</a>
+      <a href="#contact" id="btn-contact" style="--i:5" data-translation="contactBtn">Contact</a>
     </nav>
   </header>
   <secttion id="home">
     <div class="home-content">
       <h3 data-translation="welcome">Hello World!</h3>
-      <h3>
-        <h3 data-translation="im">I'm</h3><span class="multiple-text"></span><span class="texto-multiple"></span>
-      </h3>
-      <p>Scroll down to know more about me
+      <div class="container-typed">
+        <h2 data-translation="im">I'm </h2><span class="multiple-text"></span><span class="texto-multiple"></span>
+      </div>
+      <p data-translation="scroll">Scroll down to know more about me
         or use the top buttons for a better experience
       </p>
       <div class="social-media">
@@ -42,35 +45,35 @@
         <a href="https://wa.me/573167561290"><i class='bx bxl-whatsapp'></i></a>
       </div>
       <a href="https://drive.google.com/file/d/1pNuTqiFnXMdlYj8q5M2R1IPGQOBV6bFX/view?usp=drive_link"
-        class="btn">Download CV.</a>
+        class="btn" data-translation="downloadCV">Download CV.</a>
     </div>
     <div class="home-img">
       <img src="assets/Profile_Picture.png" alt="">
     </div>
   </secttion>
   <div id="about" class="about">
-    <h2>About Me</h2>
-    <p>
+    <h2 data-translation="aboutMe">About Me</h2>
+    <p data-translation="aboutMeText">
       Programador FULL STACK, con conocimiento práctico en lenguajes de programación y capacidad de entender nuevas
       tecnologías rapidamente y la facultad de trabajar en un entorno de equipo.
       Aspirante a Game Developer
     </p>
     <br>
-    <h2>APTITUDES</h2>
+    <h2 data-translation="aptitudes">APTITUDES</h2>
     <ul>
-      <li> Asistencia al gerente de desarrollo o desarrollador senior</li>
-      <li> Contribuir en el proceso de desarrollo de la empresa</li>
-      <li> Capacitación constante</li>
-      <li> Investigación</li>
-      <li> Monitorización</li>
-      <li> Diseñar y definir</li>
-      <li> Solucionar errores</li>
-      <li> Responsabilidad y paciencia</li>
+      <li data-translation="asist"> Asistencia al gerente de desarrollo o desarrollador senior</li>
+      <li data-translation="contribution"> Contribuir en el proceso de desarrollo de la empresa</li>
+      <li data-translation="capacitacion"> Capacitación constante</li>
+      <li data-translation="investigation"> Investigación</li>
+      <li data-translation="monitorizacion"> Monitorización</li>
+      <li data-translation="diseñar"> Diseñar y definir</li>
+      <li data-translation="solucionar"> Solucionar errores</li>
+      <li data-translation="responsability"> Responsabilidad y paciencia</li>
     </ul>
   </div>
   <div id="skills" class="skills">
-    <h2>Skills</h2>
-    <p>
+    <h2 data-translation="skills">Skills</h2>
+    <p data-translation="skillsText">
       Programacion full stack utilizando herramientas como:
     </p>
     <ul>
@@ -101,7 +104,7 @@
   </div>
   <div id="contact">
     <div class="social-media">
-      <h1>Contact Me</h1>
+      <h1 data-translation="contact">Contact Me</h1>
       <a href="https://www.linkedin.com/in/jer%C3%B3nimo-arias-9b7691230"><i class='bx bxl-linkedin-square'></i></a>
       <a href="mailto:jeronimoarias1212@gmail.com"><i class='bx bxl-gmail'></i></a>
       <a href="https://wa.me/573167561290"><i class='bx bxl-whatsapp'></i></a>
