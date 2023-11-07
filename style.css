@@ -1,9 +1,9 @@
 /*General Config*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
 ::-webkit-scrollbar {
   display: none;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 canvas {
@@ -16,7 +16,7 @@ canvas {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   z-index: 80;
 }
 
@@ -40,7 +40,7 @@ body {
 
 .loader {
   border: 4px solid #1f242d;
-  border-top: 4px solid #3DE70F;
+  border-top: 4px solid #3de70f;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -48,29 +48,33 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 12px 20px;
-  background: #3DE70F;
+  background: #3de70f;
   border-radius: 40px;
-  box-shadow: 0 0 10px #3DE70F;
+  box-shadow: 0 0 10px #3de70f;
   font-size: 16px;
   color: #000000;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
-  transition: .5s ease;
+  transition: 0.5s ease;
   animation: slideBottom 2s ease forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
-.btn:hover{
+.btn:hover {
   background: transparent;
-  color: #3DE70F;
+  color: #3de70f;
 }
 
 /*header*/
@@ -80,11 +84,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
+  padding: 20px 0 20px 10%;
   background: transparent;
   display: flex;
   justify-content: space-between;
-  align-items: canter;
+  align-items: center;
   z-index: 100;
   background-color: #000000;
 }
@@ -99,6 +103,82 @@ body {
   animation: slideRight 2s ease forwards;
 }
 
+.switch {
+  min-width: 60px;
+  position: relative;
+  display: inline-block;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f242d;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  font-size: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  content: "ENG";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #000000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #3de70f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3de70f;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  content: "ESP";
+  color: #fff;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 70%;
+}
+
 .navbar a {
   font-size: 18px;
   color: #fff;
@@ -109,13 +189,13 @@ body {
   font-weight: 500;
   margin-left: 35px;
   opacity: 0;
-  animation: slideRight .5s ease forwards;
-  animation-delay: calc(.2s * var(--i));
+  animation: slideRight 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color: #3DE70F;
+  color: #3de70f;
 }
 
 /*Home*/
@@ -139,28 +219,28 @@ body {
   font-weight: 700;
   opacity: 0;
   animation: slideBottom 2s ease forwards;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 
 .home-content h3:nth-of-type(2) {
   margin-bottom: 30px;
-
 }
 
-.home-content h2{
+.home-content h2 {
   font-size: 32px;
   font-weight: 700;
 }
 
-.container-typed{
+.container-typed {
   display: flex;
   opacity: 0;
   animation: slideBottom 2s ease forwards;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 
-.multiple-text, .texto-multiple {
-  color: #3DE70F;
+.multiple-text,
+.texto-multiple {
+  color: #3de70f;
   align-self: center;
   margin-left: 10px;
   font-size: 32px;
@@ -176,18 +256,18 @@ body {
 .home-content p {
   font-size: 16px;
   animation: slideLeft 2s ease forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .home-img img {
   max-width: 100%;
   margin-right: -500px;
   animation: slideBottom 3s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: .5s, .5s;
+  animation-delay: 0.5s, 0.5s;
 }
 
 /*About*/
-#about{
+#about {
   position: relative;
   display: flex;
   justify-content: end;
@@ -197,11 +277,12 @@ body {
   margin-bottom: 14rem;
   padding-top: 100px;
   width: 45%;
+  font-size: 20px;
   z-index: 81;
 }
 
 /*Skils*/
-#skills{
+#skills {
   position: relative;
   display: flex;
   justify-content: end;
@@ -211,10 +292,9 @@ body {
   margin-bottom: 14rem;
   width: 45%;
   padding-top: 150px;
+  font-size: 20px;
   z-index: 81;
 }
-
-
 
 .social-media a {
   display: inline-flex;
@@ -223,30 +303,30 @@ body {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #3DE70F;
+  border: 2px solid #3de70f;
   border-radius: 50%;
   font-size: 20px;
-  color: #3DE70F;
+  color: #3de70f;
   text-decoration: none;
   margin: 15px 7.5px 15px 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   animation: slideLeft 2s ease forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .social-media a:hover {
-  background: #3DE70F;
+  background: #3de70f;
   color: #1f242d;
-  box-shadow: 0 0 20px #3DE70F;
+  box-shadow: 0 0 20px #3de70f;
 }
 
 /*Projects*/
-.container{
+.container {
   display: flex;
   justify-content: end;
   padding-top: 200px;
 }
-.card{
+.card {
   overflow: hidden;
   border-radius: 20px;
   margin-left: 10px;
@@ -254,10 +334,10 @@ body {
   height: 200px;
   background-color: #fff;
   flex: 1;
-  transition: .3s all ease;
+  transition: 0.3s all ease;
 }
 
-.card h1{
+.card h1 {
   padding: 70px;
   border-radius: 20px;
   height: 200px;
@@ -265,12 +345,12 @@ body {
   opacity: 40%;
 }
 
-.card:hover{
+.card:hover {
   flex: 2;
   background-color: rgb(207, 207 207);
 }
 
-.github-btn{
+.github-btn {
   margin-top: 20px;
   position: relative;
   display: flex;
@@ -278,20 +358,20 @@ body {
 }
 
 /*Contact*/
-#contact{
+#contact {
   margin-top: 200px;
   margin-bottom: 200px;
   display: flex;
   text-align: center;
 }
-#contact div{
+#contact div {
   margin: 0 auto;
 }
-#contact div a{
+#contact div a {
   width: 120px;
   height: 120px;
   font-size: 50px;
-  border: 7px solid #3DE70F;
+  border: 7px solid #3de70f;
 }
 
 /*KEYFRAMES ANIMATION*/
@@ -318,7 +398,6 @@ body {
     opacity: 1;
   }
 }
-
 
 @keyframes slideBottom {
   0% {

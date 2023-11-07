@@ -225,8 +225,8 @@ function updateLanguage(language) {
   const elements = document.querySelectorAll("[data-translation]");
   elements.forEach((element) => {
     const key = element.getAttribute("data-translation");
-    console.log(key);
-    console.log(language);
+    //console.log(key);
+    //console.log(language);
     element.textContent = translations[language][key];
   });
 }
