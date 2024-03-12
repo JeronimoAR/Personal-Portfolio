@@ -17,7 +17,11 @@
   </div>
   <header class="header">
     <a onclick="window.scrollTo({behavior: 'smooth',top: '0'});" class="logo">Portfolio.</a>
-    <nav class="navbar">
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn" onclick="buttons()">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <nav class="navbar" id="navbar">
       <label class="switch">
         <input type="checkbox" id="toggle">
         <span class="slider round"></span>
@@ -30,6 +34,9 @@
     </nav>
   </header>
   <secttion id="home">
+    <div class="home-img">
+      <img src="assets/Profile_Picture.png" alt="">
+    </div>
     <div class="home-content">
       <h3 data-translation="welcome">Hello World!</h3>
       <div class="container-typed">
@@ -44,11 +51,8 @@
         <a href="mailto:jeronimoarias1212@gmail.com"><i class='bx bxl-gmail'></i></a>
         <a href="https://wa.me/573167561290"><i class='bx bxl-whatsapp'></i></a>
       </div>
-      <a href="https://drive.google.com/file/d/1pNuTqiFnXMdlYj8q5M2R1IPGQOBV6bFX/view?usp=drive_link"
-        class="btn" data-translation="downloadCV">Download CV.</a>
-    </div>
-    <div class="home-img">
-      <img src="assets/Profile_Picture.png" alt="">
+      <a href="https://drive.google.com/file/d/1pNuTqiFnXMdlYj8q5M2R1IPGQOBV6bFX/view?usp=drive_link" class="btn"
+        data-translation="downloadCV">Download CV.</a>
     </div>
   </secttion>
   <div id="about" class="about">
@@ -110,8 +114,10 @@
       <a href="https://wa.me/573167561290"><i class='bx bxl-whatsapp'></i></a>
     </div>
   </div>
+  <script src="https://kit.fontawesome.com/c9b87a4bee.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
+  <script src="./scripts/responsiveNav.js"></script>
 </body>
 
 </html>

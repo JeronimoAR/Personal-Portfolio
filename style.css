@@ -1,17 +1,21 @@
 /*General Config*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
+
 ::-webkit-scrollbar {
   display: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 canvas {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -51,6 +55,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -145,15 +150,15 @@ body {
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #3de70f;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #3de70f;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -168,6 +173,17 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.checkbtn {
+  width: 35px;
+  display: none;
+  font-size: 40px;
+  color: #fff;
+}
+
+#check {
+  display: none;
 }
 
 .navbar {
@@ -203,11 +219,13 @@ input:checked + .slider:before {
 #home {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row-reverse;
   align-items: center;
-  padding: 70px 10% 0;
+  flex-wrap: wrap;
+  padding: 100px 10% 0 10%;
 }
 
 .home-content {
@@ -257,6 +275,10 @@ input:checked + .slider:before {
   font-size: 16px;
   animation: slideLeft 2s ease forwards;
   animation-delay: 0.5s;
+}
+
+.home-img {
+  width: 345px;
 }
 
 .home-img img {
@@ -326,6 +348,7 @@ input:checked + .slider:before {
   justify-content: end;
   padding-top: 200px;
 }
+
 .card {
   overflow: hidden;
   border-radius: 20px;
@@ -364,14 +387,63 @@ input:checked + .slider:before {
   display: flex;
   text-align: center;
 }
+
 #contact div {
   margin: 0 auto;
 }
+
 #contact div a {
   width: 120px;
   height: 120px;
   font-size: 50px;
   border: 7px solid #3de70f;
+}
+
+@media (max-width: 840px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 200%;
+    top: 70px;
+    width: 160px;
+    height: 40%;
+    transition: .5s ease-in-out;
+  }
+
+  .navbar a {
+    margin: 0;
+  }
+
+  .checkbtn {
+    display: flex;
+    position: absolute;
+    right: 60px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  #about,
+  #skills {
+    font-size: 12px;
+  }
+
+  .home-content h3,
+  .home-content h2 {
+    font-size: 18px;
+  }
+
+  .multiple-text,
+  .texto-multiple {
+    font-size: 18px;
+  }
+
+  .home-content p {
+    font-size: 13px;
+  }
 }
 
 /*KEYFRAMES ANIMATION*/

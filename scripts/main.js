@@ -1,4 +1,4 @@
-import "./style.css";
+import "../style.css";
 
 import * as THREE from "three";
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -186,9 +186,9 @@ const translations = {
     diseñar: "Design and definition",
     solucionar: "troubleshooting",
     responsability: "Responsibility and patience",
-    skills:"Skills",
-    skillsText:"FullStack develpment with: ",
-    contact:"Contact me",
+    skills: "Skills",
+    skillsText: "FullStack develpment with: ",
+    contact: "Contact me",
   },
   es: {
     welcome: "Hola mundo",
@@ -214,9 +214,9 @@ const translations = {
     diseñar: "Diseñar y definir",
     solucionar: "Solucionar errores",
     responsability: "Responsabilidad y paciencia",
-    skills:"Abilidades",
-    skillsText:"Programacion full stack utilizando herramientas como:",
-    contact:"Contactame",
+    skills: "Abilidades",
+    skillsText: "Programacion full stack utilizando herramientas como:",
+    contact: "Contactame",
   },
 };
 
