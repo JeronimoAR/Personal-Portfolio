@@ -193,6 +193,7 @@ input:checked+.slider:before {
   flex-wrap: wrap;
   position: relative;
   width: 70%;
+  left: 0;
 }
 
 .navbar a {

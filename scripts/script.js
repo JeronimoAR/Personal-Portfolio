@@ -5,21 +5,21 @@ var btn = document.querySelector(".checkbtn")
 var size = window.innerWidth;
 var flag = false;
 window.addEventListener("resize", () => {
-    list.style.left = "200%";
-    size = window.innerWidth;
-    flag = false;
-});
-
-if (window.innerWidth < 840) {
-    for (var i = 0; i < navBtns.length; i++) {
-        navBtns[i].addEventListener("click", () => {
-            list.style.left = size + "px";
-            flag = false;
-        });
+    if (window.innerWidth < 840) {
+        list.style.left = "200%";
+        size = window.innerWidth;
+        flag = false;
+        for (var i = 0; i < navBtns.length; i++) {
+            navBtns[i].addEventListener("click", () => {
+                list.style.left = size + "px";
+                flag = false;
+            });
+        }
+        btn.addEventListener("click", buttons)
+    } else {
+        list.style.left = 0;
     }
-}
-
-btn.addEventListener("click", buttons())
+});
 
 function buttons() {
     if (flag) {
