@@ -1,5 +1,6 @@
 var navBtns = document.querySelectorAll(".navbar a");
 var list = document.getElementById("navbar");
+var btn = document.querySelector(".checkbtn")
 
 var size = window.innerWidth;
 var flag = false;
@@ -17,6 +18,8 @@ if (window.innerWidth < 840) {
         });
     }
 }
+
+btn.addEventListener("click", buttons())
 
 function buttons() {
     if (flag) {
