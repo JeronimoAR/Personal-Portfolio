@@ -357,21 +357,37 @@ input:checked+.slider:before {
   margin-bottom: 10px;
   height: 200px;
   background-color: #fff;
+  background-size: cover;
   flex: 1;
   transition: 0.3s all ease;
 }
-
-.card h1 {
-  padding: 70px;
-  border-radius: 20px;
-  height: 200px;
-  background-color: #1f242d;
-  opacity: 40%;
+.card a{
+  width: 100%;
+  height: 100%;
+  background-color: #1f242d88;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
 }
 
-.card:hover {
+.card h1{
+  transition: 0.3s all ease;
+}
+
+.card a:hover{
+  background-color: initial;
+}
+
+.card a:hover > h1{
+  opacity: 0;
+}
+
+.card:hover{
   flex: 2;
-  background-color: rgb(207, 207 207);
+  background-color: rgb(207, 207, 207);
 }
 
 .github-btn {
